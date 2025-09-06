@@ -15,6 +15,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lemonade.ui.theme.LemonadeTheme
@@ -50,10 +51,10 @@ fun LemonadeApp() {
 
     // Définir l'image et le texte en fonction de l'étape
     val (imageRes, label) = when (step) {
-        LemonadeStep.TREE -> R.drawable.lemon_tree to "Tap the lemon tree to select a lemon"
-        LemonadeStep.LEMON -> R.drawable.lemon_squeeze to "Keep tapping the lemon to squeeze it"
-        LemonadeStep.DRINK -> R.drawable.lemon_drink to "Tap the lemonade to drink it"
-        LemonadeStep.EMPTY -> R.drawable.lemon_restart to "Tap the empty glass to start again"
+        LemonadeStep.TREE -> R.drawable.lemon_tree to stringResource(R.string.LemonTree)
+        LemonadeStep.LEMON -> R.drawable.lemon_squeeze to stringResource(R.string.Lemon)
+        LemonadeStep.DRINK -> R.drawable.lemon_drink to stringResource(R.string.Glassoflemonade)
+        LemonadeStep.EMPTY -> R.drawable.lemon_restart to stringResource(R.string.Emptyglass)
     }
 
     Column(
